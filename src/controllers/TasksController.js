@@ -1,6 +1,6 @@
 import tasks from "../models/Task.js";
 
-class taskController {
+class TasksController {
     static listTasks = (req, res) => {
         tasks.find((err, tasks) => {
             res.status(200).json(tasks)
@@ -41,4 +41,4 @@ class taskController {
     }
 }
 
-export default taskController;
+export default TasksController;
