@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-mongoose.connect("mongodb+srv://Tasks:WcFcZV6eclUY9nGu@cluster0.ynbbd5v.mongodb.net/Task");
+dotenv.config();
+
+mongoose.connect(process.env.MONGO_URI);
 
 const db = mongoose.connection;
 
